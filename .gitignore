@@ -1,0 +1,12 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Secrets et configuration locale
+.env
+*.key
+
+# Dépendances et fichiers générés
+node_modules/
+__pycache__/
+*.log

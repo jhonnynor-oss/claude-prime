@@ -16,8 +16,16 @@ claude-prime/
 ├── modeles/       mes trames réutilisables (briefs, scripts, plannings)
 ├── projets/       un dossier par projet en cours
 ├── notes/         idées, essais, apprentissages
+├── index.html     la page web du projet (GitHub Pages)
 └── README.md      tu es ici
 ```
+
+## Le site
+
+La page `index.html` est publiée avec GitHub Pages.
+Adresse : `https://jhonnynor-oss.github.io/claude-prime/`
+
+Pour l'activer : **Settings**, puis **Pages**, source **Deploy from a branch**, branche **main**, dossier **/ (root)**, puis **Save**.
 
 ## Comment je l'utilise
 

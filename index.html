@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>claude prime</title>
+<meta name="description" content="Mon espace de travail pour construire, tester et garder mes meilleurs usages de Claude.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f2ec;
+    --surface: #ffffff;
+    --ink: #1c1a17;
+    --muted: #6b645b;
+    --line: #e4ddd2;
+    --accent: #c4623b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151311;
+      --surface: #1e1b18;
+      --ink: #f1ece4;
+      --muted: #a39a8e;
+      --line: #2e2a25;
+      --accent: #e08458;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 28px 0; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-family: "Fraunces", serif; font-weight: 600; font-size: 20px; }
+  .logo span { color: var(--accent); }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 22px; font-size: 15px; }
+  nav a:hover { color: var(--ink); }
+
+  .hero { padding: 72px 0 88px; }
+  .tag {
+    display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 20px;
+  }
+  h1 {
+    font-family: "Fraunces", serif; font-weight: 400;
+    font-size: clamp(40px, 7vw, 68px); line-height: 1.05; letter-spacing: -.02em;
+    margin-bottom: 24px;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .lead { font-size: 20px; color: var(--muted); max-width: 560px; }
+
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: 32px; margin-bottom: 28px; }
+
+  .punch p { font-size: 22px; font-family: "Fraunces", serif; line-height: 1.4; }
+  .punch p + p { margin-top: 6px; }
+  .punch p:last-child { color: var(--accent); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px;
+  }
+  .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .card h3 code { font-family: ui-monospace, Menlo, monospace; color: var(--accent); font-weight: 500; }
+  .card p { color: var(--muted); font-size: 15px; }
+
+  ol.steps { list-style: none; counter-reset: s; display: grid; gap: 20px; }
+  ol.steps li { counter-increment: s; display: flex; gap: 20px; align-items: baseline; }
+  ol.steps li::before {
+    content: counter(s, decimal-leading-zero);
+    font-family: "Fraunces", serif; font-size: 28px; color: var(--accent); min-width: 44px;
+  }
+  ol.steps strong { display: block; font-size: 18px; }
+  ol.steps span { color: var(--muted); }
+
+  footer { padding: 40px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer strong { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    nav { display: none; }
+    .hero { padding: 40px 0 56px; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">claude<span>.</span>prime</div>
+      <nav>
+        <a href="#pourquoi">Pourquoi</a>
+        <a href="#contenu">Contenu</a>
+        <a href="#methode">Méthode</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="tag">Projet personnel · 2026</div>
+      <h1>Mes meilleurs usages de Claude, <em>rangés</em>.</h1>
+      <p class="lead">Un espace pour construire, tester et garder ce qui marche. Prompts, modèles, projets. Un seul endroit.</p>
+    </div>
+
+    <section id="pourquoi" class="punch">
+      <h2>Pourquoi</h2>
+      <p>Chaque bon prompt finit perdu dans une conversation.</p>
+      <p>Ici, je le garde. Je le versionne. Je le réutilise.</p>
+      <p>Moins d'improvisation. Plus de méthode.</p>
+    </section>
+
+    <section id="contenu">
+      <h2>Ce qu'on trouve ici</h2>
+      <div class="grid">
+        <div class="card"><h3><code>prompts/</code></h3><p>Mes prompts testés et validés, avec un exemple de résultat.</p></div>
+        <div class="card"><h3><code>modeles/</code></h3><p>Des trames réutilisables : briefs, scripts, plannings.</p></div>
+        <div class="card"><h3><code>projets/</code></h3><p>Un dossier par projet en cours.</p></div>
+        <div class="card"><h3><code>notes/</code></h3><p>Idées, essais, apprentissages au fil de l'eau.</p></div>
+      </div>
+    </section>
+
+    <section id="methode">
+      <h2>La méthode</h2>
+      <ol class="steps">
+        <li><div><strong>Je teste</strong><span>Un prompt dans Claude, sur un vrai cas.</span></div></li>
+        <li><div><strong>Je garde</strong><span>Ce qui marche, avec son objectif et un exemple.</span></div></li>
+        <li><div><strong>Je réutilise</strong><span>Au lieu de repartir de zéro à chaque fois.</span></div></li>
+      </ol>
+    </section>
+
+    <footer>
+      <strong>Jhonny</strong> · Consultant communication 360° et stratégiste de contenu · Paris
+    </footer>
+  </div>
+</body>
+</html>
